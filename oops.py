@@ -55,3 +55,116 @@
 # emp = Employee("Kalyani", 20000)
 # emp.increase_salary(10)
 # emp.display()
+
+#Inheritance using constructor
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+       
+#     def Display(self):
+#         print("Name: ",self.name)
+#         print("Age: ",self.age)    
+            
+# class Student(Person):
+#     def __init__(self,name,age,marks):
+#          super().__init__(name,age)
+#          self.marks = marks
+    
+#     def Display(self):
+#         super().Display()
+#         print("Marks: ",self.marks)     
+
+# s1 = Student("Kalyani",21,99)
+# s1.Display()
+                   
+#Overriding
+# class Vehicle:
+#     def __init__(self,name,type):
+#          self.name = name
+#          self.type = type
+    
+#     def Display(self):
+#         print("Name of Vehicle is:",self.name)
+#         print("Type of Vehicle is:",self.type)
+
+# class Car(Vehicle):
+#     def __init__(self, name, type,avg):
+#         super().__init__(name, type)
+#         self.avg = avg
+    
+#     def Display(self):
+#         super().Display()
+#         print("Avg of Car is:",self.avg) 
+        
+# c1 = Car("BMW","car",20)
+# c1.Display()       
+
+
+# Create a class Student with private __marks and methods to set and get marks.
+# class Student:
+#     def __init__(self,name,age):
+#           self.name = name
+#           self.age= age
+#           self.__marks = 0
+    
+#     def setMarks(self,marks):
+#         self.__marks = marks
+        
+#     def getMarks(self):
+#         return self.__marks
+        
+# s1 = Student("Kalyani",20)
+# s1.setMarks(98)
+# print("Marks of student is:",s1.getMarks())
+
+# class BankAcc:
+#     def __init__(self,name,age,balance):
+#         self.name = name
+#         self.age = age
+#         self.__balance = balance
+        
+#     def deposit(self,amount):
+#         self.__balance += amount
+#         print("Account Credited with", amount)
+        
+#     def withdraw(self,amount):
+#         if amount <= self.balance:
+#             self.__balance -= amount
+#             print("Amount withdrawn",amount)
+#         else:
+#             print("Insufficient balance")
+            
+#     def showBalance(self):
+#         print("Available balance in your acc is",self.__balance)            
+
+# a1 = BankAcc("Kallu",20,2000)
+# a1.deposit(9000)
+# a1.showBalance()  
+
+#Polymorphism
+# class cat:
+#     def sound(self):
+#         print("Meow!!")
+
+# class Dog:
+#     def sound(self):
+#         print("Bark!!")
+        
+# for animal in (Dog(),cat()):
+#     animal.sound()                                        
+
+class Shape:
+    def draw(self):
+        print("Can draw anything using this method")  
+        
+class Circle:
+    def draw(self):
+        print("Drawing Cirlce")
+        
+class Rectangle:
+    def draw(self):
+        print("Drawing Rectangle")
+        
+for i in (Circle(),Rectangle()):
+    print(i.draw())        
