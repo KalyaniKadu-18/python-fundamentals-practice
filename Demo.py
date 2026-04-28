@@ -37,7 +37,6 @@
 #         else:
 #             print("num is prime")
 
-
 # num = int(input("Enter num"))
 # a,b = 0,1
 # for i in range(num):
@@ -72,3 +71,28 @@
 #         count +=1
 # print("Count",count)        
         
+#Count vowels
+# vowels = 'AEIOUaeiou'
+# count = 0
+# name = "Kalyani"
+# for i in name:
+#     if i in vowels:
+#       count +=1
+# print("Count:",count)   
+
+#fibonacii
+# a = 0
+# b = 1
+# n=5
+# for i in range(n):
+#     print(a, end="")
+# a,b = b , c=a+b             
+        
+#Reverse a num
+n = 12345
+rev = 0
+while n > 0:
+    digit = n % 10 
+    rev = rev * 10 + digit
+    n //= 10
+print(rev)       

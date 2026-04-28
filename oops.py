@@ -140,7 +140,34 @@
 
 # a1 = BankAcc("Kallu",20,2000)
 # a1.deposit(9000)
-# a1.showBalance()  
+# a1.showBalance() 
+
+#Overloading using *args
+# def add(*args):
+#     return sum(args)
+# print(add(2,3))
+# print(add(2,3,4,5)) 
+
+# Create a class Student with a method add_marks(*marks) to accept any number of marks and print their total.
+# class Student:
+#     def addMarks(self,*marks):
+#         total = 0
+#         for m in marks:
+#             total += m
+#         print("Total Marks",total)
+            
+# s = Student()
+# s.addMarks(10,20)
+# s.addMarks(20,30,40)
+# s.addMarks(20,20.34,34)   
+
+#**Kwargs - allows a function to take a named args 
+# def StuData(**kwargs):
+#     for key,value in kwargs.items():
+#         print(key, ":" , value) 
+
+# s1 = StuData(name="Kalyani",age=21,marks=89)             
+        
 
 #Polymorphism
 # class cat:
@@ -154,17 +181,47 @@
 # for animal in (Dog(),cat()):
 #     animal.sound()                                        
 
-class Shape:
-    def draw(self):
-        print("Can draw anything using this method")  
+# class Shape:
+#     def draw(self):
+#         print("Can draw anything using this method")  
         
-class Circle:
-    def draw(self):
-        print("Drawing Cirlce")
+# class Circle:
+#     def draw(self):
+#         print("Drawing Cirlce")
         
-class Rectangle:
-    def draw(self):
-        print("Drawing Rectangle")
+# class Rectangle:
+#     def draw(self):
+#         print("Drawing Rectangle")
         
-for i in (Circle(),Rectangle()):
-    print(i.draw())        
+# for i in (Circle(),Rectangle()):
+#     print(i.draw())        
+
+#Abstraction
+#abc(abstract base classes) ABC is the class in abc library
+# from abc import ABC, abstractmethod
+
+# class Animal(ABC):
+#     @abstractmethod
+#     def sound(self):
+#         print("Can make sound")
+        
+# class Dog:
+#     def sound(self):
+#         print("Can bark!!")
+        
+# d = Dog()
+# d.sound()            
+
+#factorial 
+def prime(n):
+    if (n<=1):
+        print("Num is not prime")
+    else:
+        while(n>1):
+            if(n % 2 == 0):
+                print("Num is not prime")
+            else:
+                print("Num is prime")
+                break
+prime(5)                
+
