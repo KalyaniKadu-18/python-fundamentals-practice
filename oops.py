@@ -211,17 +211,5 @@
         
 # d = Dog()
 # d.sound()            
-
-#factorial 
-def prime(n):
-    if (n<=1):
-        print("Num is not prime")
-    else:
-        while(n>1):
-            if(n % 2 == 0):
-                print("Num is not prime")
-            else:
-                print("Num is prime")
-                break
-prime(5)                
+              
 
