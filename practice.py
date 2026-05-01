@@ -66,8 +66,87 @@
 #         print("Not Plaindrome")
             
 # Q6 Create a class BankAccount with:deposit() withdraw() Also handle invalid withdrawal using exception handling.
-class BankAccount:
-    def __init__(self,amount,balance):
-        self.amount = amount
-        self.balance = balance   
+# class BankAccount:
+#     def __init__(self,amount,balance=0):
+#         self.amount = amount
+#         self.balance = balance   
         
+#     def deposit(self,amount):
+#             self.balance += amount
+#             print("You deposited:",amount)
+            
+#     def withdraw(self,amount):
+#         try:
+#             if amount > self.balance:
+#                 raise Exception("Insufficient balance")
+#             self.balance -= amount
+#             print("Withdrawn:" ,amount)
+#             print("Balance",self.balance)
+#         except Exception as e:
+#             print(e)
+            
+# customer = BankAccount(100)
+# customer.deposit(1000)
+# customer.withdraw(20)
+# print(customer) 
+
+# Q7 Write a program to count frequency of characters in a string using dictionary.
+# s = 'Ashwini'
+# freq = {}
+# for ch in  s:
+#     if ch in freq:
+#         freq[ch] +=1
+#     else:
+#         freq[ch] = 1
+# print(freq)
+
+# Q8 Demonstrate inheritance: Class Person Class Employee (inherits Person) Display employee details.
+# class Person:
+#     def __init__(self, name, dept):
+#         self.name = name
+#         self.dept = dept
+
+#     def Display(self):
+#         print("Name:", self.name)
+#         print("Department:", self.dept)
+
+
+# class Employee(Person):
+#     def __init__(self, name, dept, salary):
+#         super().__init__(name, dept)   # correct call
+#         self.salary = salary
+        
+#     def Display(self):
+#         super().Display()
+#         print("Salary:", self.salary)
+
+
+# s1 = Employee('Kalyani', 'IT', 200000)   # create Employee object
+# s1.Display()
+
+# Q9 Create a class that overloads + operator using __add__ to add two objects.
+# class C1:
+#     def __init__(self,a,b):
+#         self.a = a
+#         self.b = b
+    
+#     def Display(self):
+#         print("Value of a:",self.a)
+#         print("Value of b", self.b)
+            
+# class C2(C1):
+#     def __add__(self,other):
+#         return C2(self.a +other.a,self.b+other.b)
+  
+#     def Display(self):
+#         print("Value of a:",self.a)
+#         print("Value of b", self.b)
+
+# object = C2(10,20)
+# object2 = C2(5,5)
+# object3 = object + object2
+# object3.Display()
+
+# Q10 Create an abstract class Shape with method area() and implement it in:Circle Square
+from abc import ABC , abstractmethod
+
