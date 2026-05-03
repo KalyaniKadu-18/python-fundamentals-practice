@@ -63,7 +63,7 @@
 #     d.speak()
 #     d.bark()    
 
-# str = input("Ebter str").lower()
+# str = input("Enter str").lower()
 # vowels = 'aeiou'
 # count = 0
 # for ch in str:
@@ -85,14 +85,37 @@
 # b = 1
 # n=5
 # for i in range(n):
-#     print(a, end="")
-# a,b = b , c=a+b             
+#     print(a,end=" ")
+#     a,b = b ,a+b
         
 #Reverse a num
 # n = 12345
 # rev = 0
 # while n > 0:
-#     digit = n % 10 
+#     digit = n % 10
 #     rev = rev * 10 + digit
 #     n //= 10
-# print(rev)       
+# print(rev)
+
+# Sum of digits
+# n = 12345
+# sum_digits = 0 
+# while n > 0:
+#     digit = n % 10
+#     sum_digits += digit
+#     n //= 10
+# print(sum_digits)
+
+# str = 'Kallu'
+# rev = ''
+# for i in str:
+#     rev = i + rev
+#     print("REV",rev)
+
+# Large in array
+# n = [1,2,3,4,8]
+# large = 0
+# for i in n:
+#     if i>large:
+#         large = i
+# print(large)    
