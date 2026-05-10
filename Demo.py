@@ -119,3 +119,65 @@
 #     if i>large:
 #         large = i
 # print(large)    
+
+# Duplicate letters from strings
+# str = "Programming"
+# duplicate = ''
+
+# for ch in str:
+#     if ch not in duplicate:
+#         if str.count(ch) > 1:
+#          print(ch)
+#     duplicate += ch
+
+#anagram
+# s1 = "listen"
+# s2 = "silent"
+# if sorted(s1) == sorted(s2):
+#       print("Anagram")
+# else:
+#      print("Not anagram")
+
+# piglatin.py
+# word = 'Kalyani'
+# vowels = "aeiou"
+
+# for i in range(len(word)):
+#     if word[i] in vowels:
+#         result = word[i:] + word[:i] + "ay"
+#         print("Result:", result)
+#         break
+
+# A router is receiving packets, one after another. Each arriving packet has some size. The router is able to repackage the 
+# arriving packet together with the leftover of previous packets into one packet, but only if the size is a power of two 
+# (1, 2, 4, 8, 16, ...).
+# For each arriving packet:
+# Add it to the leftover (if any).
+# Find the largest power of 2 less than or equal to the total.
+# That becomes the repackaged size.
+# The leftover is reduced accordingly.
+# Your task is to determine the largest repackaged size that the router can ever produce.
+# Input Format:
+# The first line contains an integer N, the number of packets.
+# The next N lines contain integers, the sizes of the arriving packets.
+# Output Format:
+# Print a single integer — the maximum repackaged size.
+
+n = int(input("Enter a num: "))
+leftover = 0
+max_size = 0
+
+for _ in range(n):
+    packet = int(input("Enter package size: "))
+    total = leftover + packet
+
+    power = 1
+    while power * 2 <= total:
+        power *= 2
+
+    if power >= max_size:
+        max_size = power
+
+    leftover = total - power
+
+print(max_size)
