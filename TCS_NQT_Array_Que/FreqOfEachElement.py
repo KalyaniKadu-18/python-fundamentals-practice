@@ -6,3 +6,4 @@ for i in arr:
     else:
         frq[i] = 1
 print(frq)
+#count() for optimized solution

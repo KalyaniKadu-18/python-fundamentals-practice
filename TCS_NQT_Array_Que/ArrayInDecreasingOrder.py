@@ -4,4 +4,4 @@ for i in range(len(arr)):
         if arr[i] < arr[j]:
             arr[i],arr[j] = arr[j],arr[i]
 print(arr)            
-        
+# arr.sort(reverse = true) for optimized solution
